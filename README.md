@@ -14,3 +14,8 @@ A simple SPA responsive demo site created with ReactJS
 - React Router
 - SASS for styling
 - REDUX for global state management
+
+### Notes
+
+If repository is public you can view the site here:
+https://lukasring.github.io/demo-site/
