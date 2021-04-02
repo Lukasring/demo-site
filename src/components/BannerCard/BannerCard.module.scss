@@ -1,0 +1,18 @@
+@import "../../sass/_variables.sass";
+
+.BannerCard {
+  width: 100%;
+  text-align: left;
+  margin-bottom: $size-medium;
+
+  img {
+    width: 100%;
+  }
+
+  .Subtitle {
+    color: $text-color-dark;
+    font-size: $size-medium;
+    margin-bottom: $size-regular;
+    text-transform: uppercase;
+  }
+}

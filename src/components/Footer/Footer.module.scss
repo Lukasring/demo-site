@@ -1,0 +1,16 @@
+@import "../../sass/_variables.sass";
+
+.Footer {
+  width: 100%;
+  background: $text-color-dark;
+  color: $text-color-light;
+  text-align: center;
+  padding-top: $size-medium;
+  padding-bottom: $size-large;
+  font-size: $size-regular;
+  font-weight: 300;
+
+  .Bold {
+    font-weight: bold;
+  }
+}

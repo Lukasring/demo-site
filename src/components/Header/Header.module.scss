@@ -1,0 +1,21 @@
+@import "../../sass/_variables.sass";
+
+.Header {
+  width: 100%;
+  background: $main-color;
+  color: $text-color-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  .Title {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: $size-large;
+
+    .Bold {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../../sass/_variables.sass";
+
+.Article {
+  text-align: left;
+  width: 100%;
+}
+
+.Content {
+  p {
+    margin: $size-regular 0;
+    font-size: $size-regular;
+  }
+  p:first-child {
+    margin-top: $size-large;
+  }
+}

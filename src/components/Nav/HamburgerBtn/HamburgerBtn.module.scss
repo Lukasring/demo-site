@@ -1,0 +1,22 @@
+@import "../../../sass/_variables.sass";
+
+.Hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $hamburger-size/4;
+  background: $main-color-dark;
+  width: $hamburger-size;
+  height: $hamburger-size;
+  gap: $hamburger-size/10;
+  border-radius: $hamburger-size/5;
+
+  div {
+    width: 100%;
+    // margin: 4px 0rem;
+    height: 100%;
+    border-radius: 4px;
+    background: $secondary-color;
+  }
+}

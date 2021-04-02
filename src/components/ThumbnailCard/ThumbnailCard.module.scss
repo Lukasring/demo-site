@@ -1,0 +1,29 @@
+@import "../../sass/_variables.sass";
+
+.ThumbnailCard {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: $size-medium;
+  img {
+    display: block;
+    height: 100%;
+  }
+  .TitleWrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: $secondary-color-transparent;
+    padding: $size-regular;
+    text-align: left;
+  }
+
+  .Title {
+    font-size: $size-medium-large;
+    text-transform: uppercase;
+    color: $text-color-dark;
+    opacity: 1;
+  }
+}

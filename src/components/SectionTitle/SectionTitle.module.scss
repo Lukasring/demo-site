@@ -1,0 +1,37 @@
+@import "../../sass/_variables.sass";
+
+$underline-height: 10px;
+
+.SectionTitle {
+  display: inline-block;
+  position: relative;
+  font-size: $size-large;
+  font-weight: bold;
+  // padding: $size-regular;
+  text-transform: uppercase;
+  padding-bottom: $size-regular;
+  color: $text-color-light;
+
+  &.Underline {
+    padding-bottom: $size-regular * 2;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      // top: $size-regular * 4;
+      left: 0%;
+      width: 30%;
+      height: $underline-height;
+      background: $text-color-light;
+    }
+  }
+
+  &.Dark {
+    color: $text-color-dark;
+    &:before {
+      background: $text-color-dark;
+    }
+  }
+}
