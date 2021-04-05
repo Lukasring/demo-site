@@ -7,9 +7,14 @@
   justify-content: center;
   overflow: hidden;
   margin-bottom: $size-medium;
-  img {
-    display: block;
-    height: 100%;
+
+  .ImgWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: $card-img-height;
+    background-position: center;
+    background-size: cover;
   }
   .TitleWrapper {
     position: absolute;

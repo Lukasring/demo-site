@@ -2,12 +2,15 @@
 
 $underline-height: 10px;
 
+.TitleWrapper {
+  text-align: left;
+}
+
 .SectionTitle {
   display: inline-block;
   position: relative;
   font-size: $size-large;
   font-weight: bold;
-  // padding: $size-regular;
   text-transform: uppercase;
   padding-bottom: $size-regular;
   color: $text-color-light;
@@ -20,7 +23,6 @@ $underline-height: 10px;
       display: block;
       position: absolute;
       bottom: 0;
-      // top: $size-regular * 4;
       left: 0%;
       width: 30%;
       height: $underline-height;
@@ -33,5 +35,16 @@ $underline-height: 10px;
     &:before {
       background: $text-color-dark;
     }
+  }
+}
+
+.SectionSubtitle {
+  color: $text-color-light;
+  font-size: $size-medium;
+  margin-bottom: $size-regular;
+  text-transform: uppercase;
+
+  &.Dark {
+    color: $text-color-dark;
   }
 }

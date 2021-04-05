@@ -1,0 +1,29 @@
+@import "../../sass/_variables.sass";
+
+.Section {
+  display: grid;
+  row-gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $screen-large) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    justify-content: center;
+  }
+
+  &.SmallLarge {
+    @media (min-width: $screen-large) {
+      grid-template-columns: 1fr 2fr;
+      column-gap: 3rem;
+      justify-content: center;
+    }
+  }
+
+  &.LargeSmall {
+    @media (min-width: $screen-large) {
+      grid-template-columns: 2fr 1fr;
+      column-gap: 3rem;
+      justify-content: center;
+    }
+  }
+}

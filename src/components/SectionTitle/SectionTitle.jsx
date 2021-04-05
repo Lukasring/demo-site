@@ -1,10 +1,18 @@
 import React from "react";
 import classes from "./SectionTitle.module.scss";
 
-export default function SectionTitle({ underline, dark, children }) {
-  let style = classes.SectionTitle;
-  style = underline ? style + " " + classes.Underline : style;
-  style = dark ? style + " " + classes.Dark : style;
+export default function SectionTitle({ underline, dark, subtitle, children }) {
+  let titleStyle = classes.SectionTitle;
+  let subtitleStyle = classes.SectionSubtitle;
 
-  return <h2 className={style}>{children}</h2>;
+  titleStyle = underline ? titleStyle + " " + classes.Underline : titleStyle;
+  titleStyle = dark ? titleStyle + " " + classes.Dark : titleStyle;
+  subtitleStyle = dark ? subtitleStyle + " " + classes.Dark : subtitleStyle;
+
+  return (
+    <div className={classes.TitleWrapper}>
+      <h2 className={titleStyle}>{children}</h2>
+      {subtitle ? <h3 className={subtitleStyle}>{subtitle}</h3> : null}
+    </div>
+  );
 }

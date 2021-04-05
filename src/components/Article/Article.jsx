@@ -1,13 +1,9 @@
 import React from "react";
-import SectionTitle from "../SectionTitle/SectionTitle";
 import classes from "./Article.module.scss";
 
 export default function Article() {
   return (
     <div className={classes.Article}>
-      <SectionTitle underline dark>
-        Contact
-      </SectionTitle>
       <div className={classes.Content}>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -16,6 +16,12 @@
   cursor: pointer;
   transition: all 0.1s ease-out;
 
+  &:hover {
+    border: 2px solid $main-color;
+    background: $text-color-light;
+    color: $main-color;
+  }
+
   &.Inverted {
     border: 2px solid $main-color;
     background: $text-color-light;

@@ -1,5 +1,6 @@
 import React from "react";
 import SectionTitle from "../SectionTitle/SectionTitle";
+import Button from "../Button/Button";
 import classes from "./HeroCard.module.scss";
 
 export default function HeroCard() {
@@ -13,9 +14,7 @@ export default function HeroCard() {
         commodo consequat.
       </p>
       <div className={classes.Control}>
-        <a href="#" className={classes.Btn}>
-          Learn More
-        </a>
+        <Button>Learn more</Button>
       </div>
     </div>
   );
