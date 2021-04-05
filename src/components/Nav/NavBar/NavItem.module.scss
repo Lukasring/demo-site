@@ -1,0 +1,23 @@
+@import "../../../sass/_variables.sass";
+
+.NavItem {
+  display: inline-block;
+  padding: $size-large $size-regular;
+  color: $text-color-light;
+  font-family: inherit;
+  font-size: $size-regular;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.1s ease-out;
+  width: 100%;
+
+  &:hover {
+    color: $main-color-dark;
+  }
+
+  @media (min-width: $screen-large) {
+    padding: $size-regular $size-regular;
+    width: auto;
+  }
+}

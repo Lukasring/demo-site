@@ -1,12 +1,12 @@
-import React from 'react';
-import classes from './HamburgerBtn.module.scss';
+import React from "react";
+import classes from "./HamburgerBtn.module.scss";
 
-export default function HamburgerBtn() {
+export default function HamburgerBtn({ clicked }) {
   return (
-    <div className={classes.Hamburger}>
+    <div className={classes.Hamburger} onClick={clicked}>
       <div></div>
       <div></div>
       <div></div>
     </div>
-  )
+  );
 }

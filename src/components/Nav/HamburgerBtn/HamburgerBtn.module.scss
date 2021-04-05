@@ -11,6 +11,20 @@
   height: $hamburger-size;
   gap: $hamburger-size/10;
   border-radius: $hamburger-size/5;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+
+  &:hover {
+    background: $secondary-color;
+
+    div {
+      background: $main-color-dark;
+    }
+  }
+
+  @media (min-width: $screen-large) {
+    display: none;
+  }
 
   div {
     width: 100%;

@@ -1,0 +1,34 @@
+@import "../../../sass/_variables.sass";
+
+.NavBar {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: $size-small;
+  position: absolute;
+  right: 0;
+  top: 6.54rem;
+  transform: translateX(100%);
+  width: 50%;
+  background: $main-color;
+  justify-content: space-around;
+  transition: transform 0.2s ease-out;
+
+  &.open {
+    transform: translateX(0%);
+    z-index: 5;
+  }
+
+  li {
+    position: relative;
+  }
+  @media (min-width: $screen-large) {
+    left: 0;
+    top: 0;
+    transform: translateX(0);
+    height: auto;
+    width: auto;
+    position: relative;
+    flex-direction: row;
+  }
+}

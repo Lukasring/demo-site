@@ -1,0 +1,47 @@
+@import "../../../sass/_variables.sass";
+
+.Dropdown {
+  list-style: none;
+  text-align: left;
+  padding: $size-regular $size-small;
+  position: absolute;
+  background: $text-color-dark;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fade-in 0.2s ease-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 10px);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+
+  a {
+    display: block;
+    padding: $size-small $size-large $size-small $size-medium;
+    font-size: $size-regular;
+    color: $text-color-light;
+    transition: all 0.1s ease-out;
+    text-decoration: none;
+
+    &:hover {
+      background: $text-color-light;
+      color: $text-color-dark;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: $text-color-dark;
+  }
+}

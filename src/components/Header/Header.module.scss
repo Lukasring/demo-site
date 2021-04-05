@@ -3,11 +3,6 @@
 .Header {
   width: 100%;
   background: $main-color;
-  color: $text-color-light;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
 
   .Title {
     text-transform: uppercase;
@@ -17,5 +12,15 @@
     .Bold {
       font-weight: bold;
     }
+  }
+
+  .Content {
+    max-width: $max-width;
+    margin: auto;
+    color: $text-color-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $size-medium;
   }
 }
