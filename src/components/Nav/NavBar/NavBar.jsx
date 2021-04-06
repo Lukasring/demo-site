@@ -3,7 +3,7 @@ import NavItem from "./NavItem";
 import classes from "./NavBar.module.scss";
 import { PATHS } from "../../../common/paths";
 
-export default function NavBar({ mobileOpen, clicked }) {
+export default function NavBar({ mobileOpen, clicked, links }) {
   const styles = [classes.NavBar];
   if (mobileOpen) {
     styles.push(classes.open);
@@ -11,13 +11,13 @@ export default function NavBar({ mobileOpen, clicked }) {
   return (
     <nav>
       <ul className={styles.join(" ")} onClick={clicked}>
-        {PATHS.map((path) => (
+        {links?.map((link) => (
           <NavItem
-            key={path.path}
-            path={path.path}
-            dropdownItems={path?.dropdown}
+            key={link.path}
+            path={link.path}
+            dropdownItems={link?.dropdown}
           >
-            {path.name}
+            {link.name}
           </NavItem>
         ))}
       </ul>

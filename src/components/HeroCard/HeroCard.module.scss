@@ -31,9 +31,14 @@
 
   .Content {
     // padding: $size-regular;
+
     padding-top: $size-regular * 2;
     padding-bottom: $size-regular * 3;
     font-size: $size-regular;
+
+    p {
+      color: $text-color-light;
+    }
   }
 
   .Control {

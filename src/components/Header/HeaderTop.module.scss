@@ -1,0 +1,23 @@
+@import "../../sass/_variables.sass";
+.HeaderTop {
+  display: flex;
+
+  .Item {
+    color: $text-color-light;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 $size-small;
+    font-size: $size-regular;
+    font-weight: 100;
+    border-right: 1px solid $secondary-color;
+    border-bottom: 1px solid transparent;
+    transition: all 0.1s ease-out;
+    &:hover {
+      border-bottom: 1px solid $secondary-color;
+    }
+
+    &:last-of-type {
+      border-right: none;
+    }
+  }
+}

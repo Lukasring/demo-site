@@ -3,16 +3,11 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 import Button from "../Button/Button";
 import classes from "./HeroCard.module.scss";
 
-export default function HeroCard() {
+export default function HeroCard({ title, children }) {
   return (
     <div className={classes.HeroCard}>
-      <SectionTitle underline>Welcome</SectionTitle>
-      <p className={classes.Content}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <SectionTitle underline>{title}</SectionTitle>
+      <div className={classes.Content}>{children}</div>
       <div className={classes.Control}>
         <Button>Learn more</Button>
       </div>

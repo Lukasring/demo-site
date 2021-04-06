@@ -2,20 +2,27 @@
 
 .ContentCard {
   width: 100%;
-  padding: $size-regular 0;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 
   .Content {
     background: $secondary-color;
     padding: $size-medium-large;
+    flex: 1;
   }
   .Title {
     color: $text-color-dark;
     font-size: $size-medium-large;
     margin-bottom: $size-medium-large;
   }
-  p {
-    margin-top: $size-small;
+
+  @media (min-width: $screen-large) {
+    .Content {
+      background: $secondary-color;
+      padding: $size-medium-large $size-large;
+      flex: 1;
+    }
   }
 }
 

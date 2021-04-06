@@ -4,11 +4,13 @@
   display: grid;
   row-gap: 1rem;
   grid-template-columns: 1fr;
+  margin-bottom: $size-medium-large;
 
   @media (min-width: $screen-large) {
     grid-template-columns: 1fr 1fr;
     column-gap: 3rem;
     justify-content: center;
+    margin-bottom: $size-large;
   }
 
   &.SmallLarge {

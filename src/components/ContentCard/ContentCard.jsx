@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./ContentCard.module.scss";
 
-export default function ContentCard({ img }) {
+export default function ContentCard({ img, title, children }) {
   return (
     <div className={classes.ContentCard}>
       <div
@@ -9,19 +9,8 @@ export default function ContentCard({ img }) {
         style={{ backgroundImage: `url('${img}')` }}
       ></div>
       <div className={classes.Content}>
-        <h3 className={classes.Title}>Ui/UX Design</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <h3 className={classes.Title}>{title}</h3>
+        {children}
       </div>
     </div>
   );

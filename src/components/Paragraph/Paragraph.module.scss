@@ -1,0 +1,15 @@
+@import "../../sass/_variables.sass";
+.Paragraph {
+  color: $text-color-dark;
+  font-family: inherit;
+  font-size: $size-regular;
+  margin-top: $size-regular;
+
+  &.noMargin {
+    margin: 0;
+  }
+
+  &.largeMargin {
+    margin-top: $size-large;
+  }
+}

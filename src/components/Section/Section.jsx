@@ -6,7 +6,7 @@ export const columns = {
   largeSmall: "large-small",
 };
 
-export default function Section({ children, layout }) {
+export default function Section({ children, layout, Title }) {
   const styles = [classes.Section];
   if (layout === columns.smallLarge) {
     styles.push(classes.SmallLarge);
@@ -15,5 +15,9 @@ export default function Section({ children, layout }) {
     styles.push(classes.LargeSmall);
   }
 
-  return <section className={styles.join(" ")}>{children}</section>;
+  return (
+    <>
+      <section className={styles.join(" ")}>{children}</section>
+    </>
+  );
 }

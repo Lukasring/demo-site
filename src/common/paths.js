@@ -56,3 +56,26 @@ export const PATHS = [
     path: "/contact",
   },
 ];
+
+export const headerTopItems = [
+  {
+    name: "menu",
+    path: "/menu",
+  },
+  {
+    name: "some text",
+    path: "/some-text",
+  },
+  {
+    name: "another item",
+    path: "/another-item",
+  },
+  {
+    name: "one more",
+    path: "/one-more",
+  },
+  {
+    name: "last one",
+    path: "/last-one",
+  },
+];

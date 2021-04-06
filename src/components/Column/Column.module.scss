@@ -1,0 +1,8 @@
+@import "../../sass/_variables.sass";
+
+.Column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $size-regular;
+}
