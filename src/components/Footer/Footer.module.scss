@@ -10,7 +10,36 @@
   font-size: $size-regular;
   font-weight: 300;
 
+  .copyright {
+    text-align: center;
+  }
+
+  .Content {
+    display: none;
+  }
+
   .Bold {
     font-weight: bold;
+  }
+
+  @media (min-width: $screen-large) {
+    .copyright {
+      text-align: right;
+      max-width: $max-width;
+      margin: auto;
+      padding-right: $size-medium;
+    }
+    .Content {
+      max-width: $max-width;
+      text-align: left;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: $size-large;
+      p {
+        font-size: 0.8rem;
+        color: #ccc;
+      }
+    }
   }
 }

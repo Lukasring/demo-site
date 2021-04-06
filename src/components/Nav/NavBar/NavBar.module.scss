@@ -5,13 +5,15 @@
   flex-direction: column;
   list-style: none;
   padding: $size-small;
+  padding-top: $size-large * 2;
   position: fixed;
   right: 0;
-  top: 6.54rem;
+  top: 0;
+  height: 100vh;
   transform: translateX(100%);
   width: 50%;
   background: $main-color;
-  justify-content: space-around;
+  justify-content: flex-start;
   transition: transform 0.2s ease-out;
 
   &.open {
@@ -31,5 +33,6 @@
     width: auto;
     position: relative;
     flex-direction: row;
+    padding: $size-small;
   }
 }

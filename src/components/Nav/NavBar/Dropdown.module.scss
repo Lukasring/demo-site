@@ -37,6 +37,12 @@
   }
 }
 
+footer {
+  .Dropdown {
+    display: none;
+  }
+}
+
 @keyframes fade-in {
   0% {
     background: transparent;

@@ -25,20 +25,29 @@ export default function MainPage() {
           <Paragraph placeholder />
         </ContentCard>
       </Section>
-      <SectionTitle subtitle="offers today" dark>
-        Products
-      </SectionTitle>
-      <Section>
+
+      <Section
+        titleComponent={
+          <SectionTitle subtitle="offers today" dark>
+            Products
+          </SectionTitle>
+        }
+      >
         <BannerCard></BannerCard>
         <Column>
           <ThumbnailCard img={thumbnailImg1} title="THE BEST COFFE" />
           <ThumbnailCard img={thumbnailImg2} title="TOP 100 BOOKS" />
         </Column>
       </Section>
-      <SectionTitle underline dark>
-        Contact
-      </SectionTitle>
-      <Section layout={columns.largeSmall}>
+
+      <Section
+        layout={columns.largeSmall}
+        titleComponent={
+          <SectionTitle underline dark>
+            Contact
+          </SectionTitle>
+        }
+      >
         <Article title="Contact">
           <Paragraph placeholder />
           <Paragraph placeholder />

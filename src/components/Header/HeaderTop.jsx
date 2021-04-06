@@ -6,7 +6,7 @@ export default function HeaderTop({ items }) {
   return (
     <div className={classes.HeaderTop}>
       {items?.map((item) => (
-        <Link to={item.path} className={classes.Item}>
+        <Link key={item.path} to={item.path} className={classes.Item}>
           {item.name}
         </Link>
       ))}

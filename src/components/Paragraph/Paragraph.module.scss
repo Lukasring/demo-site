@@ -9,6 +9,10 @@
     margin: 0;
   }
 
+  &.mediumMargin {
+    margin-top: $size-medium-large;
+  }
+
   &.largeMargin {
     margin-top: $size-large;
   }

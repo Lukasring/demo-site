@@ -29,3 +29,9 @@
     }
   }
 }
+
+.padded {
+  @media (min-width: $screen-large) {
+    padding: 0 $size-regular;
+  }
+}

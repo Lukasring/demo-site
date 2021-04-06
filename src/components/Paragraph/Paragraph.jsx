@@ -10,6 +10,9 @@ export default function Paragraph({ placeholder, margin, children }) {
     case "large":
       styles.push(classes.largeMargin);
       break;
+    case "medium":
+      styles.push(classes.mediumMargin);
+      break;
     default:
       break;
   }

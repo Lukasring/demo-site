@@ -11,13 +11,21 @@ import Backdrop from "../Backdrop/Backdrop";
 import classes from "./Layout.module.scss";
 
 export default function Layout({ children }) {
+  const mobileNavOpen = useSelector((state) => state.mobileNavOpen);
+  const dispatch = useDispatch();
   const { pathname } = useLocation();
 
   useEffect(() => {
-    console.log(pathname);
-  }, [pathname]);
-  const mobileNavOpen = useSelector((state) => state.mobileNavOpen);
-  const dispatch = useDispatch();
+    dispatch(actions.addToHistory(pathname));
+  }, [pathname, dispatch]);
+
+  const nav = (
+    <NavBar
+      links={PATHS}
+      mobileOpen={mobileNavOpen}
+      clicked={() => dispatch(actions.closeMobileNav())}
+    ></NavBar>
+  );
 
   return (
     <>
@@ -30,17 +38,18 @@ export default function Layout({ children }) {
         link="./"
         topItems={headerTopItems}
       >
-        <NavBar
-          links={PATHS}
-          mobileOpen={mobileNavOpen}
-          clicked={() => dispatch(actions.closeMobileNav())}
-        ></NavBar>
+        {nav}
         <Hamburger
           clicked={() => dispatch(actions.toggleMobileNav())}
         ></Hamburger>
       </Header>
       <main className={classes.Content}>{children}</main>
-      <Footer></Footer>
+      <Footer
+        links={PATHS}
+        text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga error eos
+        quae accusamus ipsam dicta eveniet vero consequatur libero perspiciatis?"
+        nav={nav}
+      ></Footer>
     </>
   );
 }

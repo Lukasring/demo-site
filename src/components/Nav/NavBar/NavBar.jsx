@@ -1,7 +1,6 @@
 import React from "react";
 import NavItem from "./NavItem";
 import classes from "./NavBar.module.scss";
-import { PATHS } from "../../../common/paths";
 
 export default function NavBar({ mobileOpen, clicked, links }) {
   const styles = [classes.NavBar];
