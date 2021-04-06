@@ -3,26 +3,26 @@ import Layout from "./components/Layout/Layout";
 import MainPage from "./pages/MainPage";
 import ContentPage from "./pages/ContentPage";
 
-import "./App.scss";
-
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Layout>
-          <Switch>
-            <Route path="/demo-page">
-              <MainPage></MainPage>
-            </Route>
-            <Route path="/:page">
-              <ContentPage></ContentPage>
-            </Route>
-            <Route exact path="/">
-              <MainPage></MainPage>
-            </Route>
-          </Switch>
-        </Layout>
-      </div>
+      <Layout>
+        <Switch>
+          <Route path="/demo-site">
+            {/*this route is only used for hosting on github pages */}
+            <MainPage></MainPage>
+          </Route>
+          <Route exact path="/:page/:subpage">
+            <ContentPage></ContentPage>
+          </Route>
+          <Route path="/:page">
+            <ContentPage></ContentPage>
+          </Route>
+          <Route exact path="/">
+            <MainPage></MainPage>
+          </Route>
+        </Switch>
+      </Layout>
     </BrowserRouter>
   );
 }

@@ -1,13 +1,11 @@
 import React from "react";
-import { useParams, useRouteMatch } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function ContentPage() {
-  console.log(useRouteMatch());
-  console.log(useParams());
-  let { page } = useParams();
+  let { page, subpage } = useParams();
   return (
     <div>
-      <h1>{page}</h1>
+      <h1>{subpage ? subpage : page}</h1>
     </div>
   );
 }

@@ -19,7 +19,12 @@ export default function NavItem({ path, dropdownItems, clicked, children }) {
   };
   return (
     <li onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
-      <NavLink to={path} className={classes.NavItem}>
+      <NavLink
+        to={path}
+        exact={path === "/"}
+        className={classes.NavItem}
+        activeClassName={classes.active}
+      >
         {children}
       </NavLink>
       {dropdownOpen && (

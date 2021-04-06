@@ -2,6 +2,8 @@
 
 .Content {
   padding: $size-medium;
+  width: 100%;
   max-width: $max-width;
   margin: auto;
+  flex: 1;
 }

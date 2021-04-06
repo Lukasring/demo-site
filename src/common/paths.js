@@ -35,7 +35,7 @@ export const PATHS = [
   },
   {
     name: "About Me",
-    path: "about-me",
+    path: "/about-me",
     dropdown: [
       {
         name: "History",
@@ -53,6 +53,6 @@ export const PATHS = [
   },
   {
     name: "Contact",
-    path: "contact",
+    path: "/contact",
   },
 ];

@@ -6,8 +6,10 @@
 
   .Title {
     text-transform: uppercase;
+    text-decoration: none;
     font-weight: 300;
     font-size: $size-large;
+    color: $text-color-light;
 
     .Bold {
       font-weight: bold;
