@@ -22,7 +22,7 @@ export default function Button({
   }
 
   return (
-    <button className={style} onClick={onClick}>
+    <button data-testid="button" className={style} onClick={onClick}>
       {children}
     </button>
   );

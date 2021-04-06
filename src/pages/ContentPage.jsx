@@ -5,7 +5,7 @@ import Article from "../components/Article/Article";
 import { useParams } from "react-router-dom";
 
 export default function ContentPage() {
-  let { page, subpage } = useParams();
+  const { page, subpage } = useParams();
   let title = subpage ? subpage : page;
 
   title = title.replaceAll("-", " ");
