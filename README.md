@@ -25,4 +25,4 @@ https://lukasring.github.io/demo-site/
 
 ### Author
 
-[Lukas](https://github.com/Lukasring)
+[Lukas Pažėra](https://github.com/Lukasring)
