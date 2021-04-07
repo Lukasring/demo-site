@@ -9,7 +9,7 @@ export default function HeroCard({ title, children }) {
       <SectionTitle underline>{title}</SectionTitle>
       <div className={classes.Content}>{children}</div>
       <div className={classes.Control}>
-        <Button>Learn more</Button>
+        <Button link="learn-more">Learn more</Button>
       </div>
     </div>
   );

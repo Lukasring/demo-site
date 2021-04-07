@@ -14,8 +14,12 @@ export default function BannerCard() {
       try {
         const res = await axios.get("/v1/places/vilnius/forecasts/long-term");
         const date = new Date();
-        const currDay = date.getUTCDate().toString();
-        const currHour = date.getUTCHours().toString();
+        const currDay =
+          date.getUTCDate() < 10 ? "0" + date.getUTCDate() : date.getUTCDate();
+        const currHour =
+          date.getUTCHours() < 10
+            ? "0" + date.getUTCHours()
+            : date.getUTCHours();
         const conditionCode = res.data.forecastTimestamps.find((timestamp) =>
           timestamp.forecastTimeUtc.match(`${currDay} ${currHour}`)
         ).conditionCode;
@@ -33,29 +37,35 @@ export default function BannerCard() {
   }, []);
 
   function setImgByCurrWeather(condition) {
-    switch (condition) {
-      case "clear":
-      case "isolated-clouds":
-      case "scattered-clouds":
-      case "na":
-        setImg(glasses);
-        break;
-      case "overcast":
-      case "light-rain":
-      case "moderate-rain":
-      case "heavy-rain":
-      case "fog":
-        setImg(umbrella);
-        break;
-      case "sleet":
-      case "light-snow":
-      case "moderate-snow":
-      case "heavy-snow":
-        setImg(snowflake);
-        break;
-      default:
-        setImg(glasses);
+    if (
+      condition === "clear" ||
+      condition === "isolated-clouds" ||
+      condition === "scattered-clouds" ||
+      condition === "na"
+    ) {
+      setImg(glasses);
+      return;
     }
+    if (
+      condition === "overcast" ||
+      condition === "light-rain" ||
+      condition === "moderate-rain" ||
+      condition === "fog" ||
+      condition === "heavy-rain"
+    ) {
+      setImg(umbrella);
+      return;
+    }
+    if (
+      condition === "sleet" ||
+      condition === "light-snow" ||
+      condition === "moderate-snow" ||
+      condition === "heavy-snow"
+    ) {
+      setImg(snowflake);
+      return;
+    }
+    setImg(glasses);
   }
 
   return (
